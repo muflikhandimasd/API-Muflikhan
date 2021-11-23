@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>ICT Registration</title>
+    <title>Edit My API</title>
     <link rel="shortcut icon" href="https://img.icons8.com/cute-clipart/64/000000/api.png" type="image/x-icon">
 
 
@@ -232,8 +232,8 @@
 
 <body>
     <div class="background">
-        <div class="container text-center pading">
-            <h1>Edit User Profile from My API</h1>
+        <div class="container text-center pading" style="color: #FFF">
+            <h1>Edit User Profile My API</h1>
             <a class="btn btn-primary" href="/myapi">Back to My API</a>
             <p class="mt-3">Edit User Profile My API</p>
         </div>
@@ -269,7 +269,7 @@
                     <input type="photo" name="photo" class="form-control" value="{{ $response['result']['photo'] }}"
                         id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary container mb-4">Submit</button>
             </form>
         </div>
     </div>
