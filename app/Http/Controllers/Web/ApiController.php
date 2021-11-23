@@ -18,15 +18,15 @@ class ApiController extends Controller
 
     public function daftarApi(Request $request)
     {
-        $response = Http::post('https://latihan-api-rsz.herokuapp.com/api/registrasi', $request->input())->json();
+        $response = Http::post('https://challenge-build-api.herokuapp.com/api/registrasi', $request->input())->json();
 
-        if($response['status'] == 0){
-            return view('Api.register',compact('response'));
+        if ($response['status'] == 0) {
+            return view('Api.register', compact('response'));
         };
 
         // return dd($response);
 
-        return view('Api.dataLoginApi' , compact('response'));
+        return view('Api.dataLoginApi', compact('response'));
     }
 
     public function loginApi()
@@ -37,31 +37,29 @@ class ApiController extends Controller
 
     public function masukApi(Request $request)
     {
-        $response = Http::post('https://latihan-api-rsz.herokuapp.com/api/login', $request->input())->json();
+        $response = Http::post('https://challenge-build-api.herokuapp.com/api/login', $request->input())->json();
 
-        if($response['status'] == 0){
-            return view('Api.login',compact('response'));
+        if ($response['status'] == 0) {
+            return view('Api.login', compact('response'));
         };
 
-        return view('Api.dataLoginApi' , compact('response'));
+        return view('Api.dataLoginApi', compact('response'));
     }
 
     public function editApi($user_id)
     {
-        $response = Http::get('https://latihan-api-rsz.herokuapp.com/api/getuser/' . $user_id)->json();
+        $response = Http::get('https://challenge-build-api.herokuapp.com/api/getuser/' . $user_id)->json();
         return view('Api.edit', compact('response'));
     }
 
     public function editUserApi(Request $request, $user_id)
     {
-        $response = Http::put('https://latihan-api-rsz.herokuapp.com/api/edit/' . $user_id, $request->input())->json();
+        $response = Http::put('https://challenge-build-api.herokuapp.com/api/edit/' . $user_id, $request->input())->json();
 
-        if($response['status'] == 0){
-            return view('Api.edit',compact('response'));
+        if ($response['status'] == 0) {
+            return view('Api.edit', compact('response'));
         };
 
-        return view('Api.dataLoginApi' , compact('response'));
+        return view('Api.dataLoginApi', compact('response'));
     }
-
-
 }
